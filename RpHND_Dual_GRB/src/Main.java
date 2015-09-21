@@ -279,7 +279,7 @@ public class Main {
 							GRBLinExpr con2 = new GRBLinExpr();
 							con2.addTerm(1, u3[i][j]); out.print(" + " + 1 + u3[i][j].get(GRB.StringAttr.VarName));
 							con2.addTerm(1, u4[i][j][k][r]); out.print(" + " + 1 + u4[i][j][k][r].get(GRB.StringAttr.VarName));
-							con2.addTerm(1, u5[i][j][k][r]); out.print(" + " + 1 + u5[i][j][k][r].get(GRB.StringAttr.VarName));
+							con2.addTerm(1, u5[i][j][m][r]); out.print(" + " + 1 + u5[i][j][k][r].get(GRB.StringAttr.VarName));
 							if (i!=k && i!=m)
 								{tot+=1;con2.addTerm(1, u6[i][j][r]); out.print(" + " + 1 + u6[i][j][r].get(GRB.StringAttr.VarName));}
 							if (j!=k && j!=m)
@@ -353,7 +353,7 @@ public class Main {
 							for (int r=_R+1; r<=R; r++){  // only leaf nodes are included in these constraints
 								GRBLinExpr con4 = new GRBLinExpr();
 								tot+=1;con4.addTerm(1, u4[i][j][k][r]); out.print(" + " + 1 + u4[i][j][k][r].get(GRB.StringAttr.VarName));
-								tot+=1;con4.addTerm(1, u5[i][j][k][r]); out.print(" + " + 1 + u5[i][j][k][r].get(GRB.StringAttr.VarName));
+								tot+=1;con4.addTerm(1, u5[i][j][m][r]); out.print(" + " + 1 + u5[i][j][m][r].get(GRB.StringAttr.VarName));
 								if (i!=k && i!=m)
 									{tot+=1;con4.addTerm(1, u6[i][j][r]); out.print(" + " + 1 + u6[i][j][r].get(GRB.StringAttr.VarName));}
 								if (j!=k && j!=m)
